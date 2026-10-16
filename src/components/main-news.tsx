@@ -15,16 +15,16 @@ const MainNews = async () => {
 
   
     const mainNews = data.data[0]; 
-    console.log('প্রব্লেম সল্ভে করতে হবে,', mainNews);
+    // console.log('প্রব্লেম সল্ভে করতে হবে,', mainNews);
 
 
     const allMainNews : IAllMainNewsType[] = mainNews.articles; 
-    console.log('all main news এই জায়গায়', allMainNews);
+    // console.log('all main news এই জায়গায়', allMainNews);
   
 
 
     const mainNewsArticles = mainNews.articles[0];
-    console.log( 'মিলে কিনা দেখি ',mainNewsArticles);
+    // console.log( 'মিলে কিনা দেখি ',mainNewsArticles);
     const { description, title, category, imageUrl,imageAlt,id } = mainNewsArticles ;
     // console.log(mainNewsArticles);
 

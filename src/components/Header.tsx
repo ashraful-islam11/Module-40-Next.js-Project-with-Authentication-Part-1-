@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import UserInformation from "./UserInformation";
 // import NavLinks from "./NavLinks";
 
 const Header = () => {
@@ -38,7 +39,7 @@ return (
 
 {/* Buttons - Right */}
 
-<div className="flex items-center justify-center gap-2"> <button className="btn">সাইন আপ</button> <button className="btn bg-[#c10007] text-white"> সাইন ইন </button> </div>
+  <UserInformation></UserInformation>
 
 </div>
 {/* <NavLinks></NavLinks> */}

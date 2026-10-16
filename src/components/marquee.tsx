@@ -12,7 +12,7 @@ const MarqueePage =  async () => {
     const response = await fetch("https://news-api-v2.vercel.app/api/news?limit=10");
     const data = await response.json();
     const newsHeading : INewsHeading[] = data.data ;
-    console.log('কি আছে এই হেডিং এ ',newsHeading);
+    // console.log('কি আছে এই হেডিং এ ',newsHeading);
 
 
     return (

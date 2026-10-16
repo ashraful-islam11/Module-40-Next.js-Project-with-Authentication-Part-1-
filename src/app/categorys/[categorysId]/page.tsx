@@ -1,5 +1,7 @@
 
 import NewsCard, { INewsCardType } from '@/components/NewsCard';
+import { notFound } from 'next/navigation';
+
 
 import { Suspense } from 'react';
 
@@ -12,6 +14,10 @@ const CategoryContent = async ({ params } : {  params: Promise<{ categorysId: st
     
     const newsData : INewsCardType[]  = data.data ;
     console.log('news data ', newsData);
+
+    if(!newsData){
+        notFound()
+    }
 
 
     return (
