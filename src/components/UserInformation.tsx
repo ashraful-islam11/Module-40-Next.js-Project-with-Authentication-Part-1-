@@ -1,5 +1,6 @@
  "use client"
 import {  signOut, useSession } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -20,7 +21,18 @@ const UserInformation = () => {
                 <Link href={'/profile'}>
                    <div className="avatar flex justify-center mb-2">
                     <div className="ring-primary ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
-                        <img alt="Tailwind-CSS-Avatar-component" src={user?.image } />
+                        {user.image ? (
+                            <Image
+                                alt="Profile picture"
+                                width={100}
+                                height={100}
+                                src={user.image}
+                            />
+                        ) : (
+                            <div className="flex h-full w-full items-center justify-center bg-gray-200 text-gray-500 text-xs">
+                                No Image
+                            </div>
+                        )}
                     </div>  
                 </div>
                 <div className=" flex gap-2">

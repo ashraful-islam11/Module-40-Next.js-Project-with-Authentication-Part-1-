@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: "ichef.bbci.co.uk",
+         hostname: "encrypted-tbn0.gstatic.com",
         
       },
     ],
